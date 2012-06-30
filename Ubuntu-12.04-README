@@ -1,0 +1,12 @@
+Build mod_dims on Ubuntu 12.04
+==============================
+
+1. sudo apt-get install libmagick-dev libmagickcore-dev libmagickwand-dev libcurl4-openssl-dev libapr1-dev apache2-threaded-dev
+
+2. ln -s /usr/lib/libMagickWand.so.4 /usr/lib/libMagickWand.so
+   ln -s /usr/lib/libMagickCore.so.4 /usr/lib/libMagickCore.so
+
+3. configure --with-imagemagick=/usr
+   make
+
+4. cp src/.libs/libmod_dims.so /opt/al/site_common/mod_dims
